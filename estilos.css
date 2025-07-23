@@ -1,0 +1,240 @@
+/* Fuentes y estilos base */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.encabezado {
+  background-image: url("Imagenes/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  position: relative;
+}
+
+.nombre {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.foto-personal {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+/* Contenedor principal */
+.contenido-principal {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(174, 174, 174, 0.1);
+}
+
+/* Títulos */
+.titulo-seccion {
+  color: #AB47BC;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #CE93D8;
+  padding-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+/* Contenedor Flex para intereses y habilidades */
+.secciones-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.intereses,
+.habilidades {
+  flex: 1 1 300px; /* crece y reduce con ancho mínimo 300px */
+}
+
+/* Listas */
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.lista-intereses li,
+.lista-habilidades li {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Video */
+.video-contenedor {
+  margin: 1rem 0 2rem;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 315px;
+  border-radius: 0.5rem;
+  border: 2px solid #B3E5FC;
+}
+
+/* Formulario con Grid */
+.formulario-contacto {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .formulario-contacto {
+    grid-template-columns: 1fr 1fr;
+  }
+  .formulario-contacto textarea {
+    grid-column: span 2;
+  }
+  .formulario-contacto .boton-enviar {
+    grid-column: span 2;
+    justify-self: start;
+  }
+}
+
+/* Etiquetas */
+.etiqueta {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs y textarea */
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #F3E5F5;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #AB47BC;
+  outline: none;
+}
+
+/* Botón */
+.boton-enviar {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #AB47BC;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background-color: #9C27B0;
+}
+
+/* MEDIA QUERIES*/
+
+@media (max-width: 600px) {
+  /* Reduce padding general */
+  .contenido-principal {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+
+  /* Intereses y habilidades apiladas (una columna) */
+  .secciones-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Tamaño de texto del encabezado más pequeño */
+  .nombre {
+    font-size: 2rem;
+  }
+
+  /* Imagen personal más pequeña */
+  .foto-personal {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Ajusta tamaño de título de sección */
+  .titulo-seccion {
+    font-size: 1.3rem;
+  }
+
+  /* Ajusta tamaño iframe video */
+  .video-iframe {
+    height: 220px;
+  }
+
+  /* Formulario: una sola columna siempre */
+  .formulario-contacto {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Botón ocupa todo el ancho */
+  .boton-enviar {
+    width: 100%;
+  }
+}
+.pie-pagina {
+  background-color: #CE93D8;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  border-top: 3px solid #B3E5FC;
+}
+
+.pie-pagina p {
+  margin: 0.5rem 0;
+}
+.redes-sociales {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.redes-sociales a {
+  text-decoration: none;
+  background-color: #B3E5FC;
+  color: #6A1B9A;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  background-color: #AB47BC;
+  color: white;
+}
+
+
+
